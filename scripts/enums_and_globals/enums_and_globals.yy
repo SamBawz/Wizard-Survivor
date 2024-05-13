@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"enums_and_globals",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enums_and_globals",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
