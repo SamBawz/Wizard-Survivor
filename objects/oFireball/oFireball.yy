@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oPlayer",
+  "%Name":"oFireball",
   "eventList":[
     {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"","%Name":"","collisionObjectId":{"name":"oExperience","path":"objects/oExperience/oExperience.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oPlayer",
+  "name":"oFireball",
   "overriddenProperties":[],
   "parent":{
-    "name":"Player",
-    "path":"folders/Objects/Player.yy",
+    "name":"Spells",
+    "path":"folders/Objects/Spells.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,9 +30,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayerIdle",
-    "path":"sprites/sPlayerIdle/sPlayerIdle.yy",
+    "name":"sFireball",
+    "path":"sprites/sFireball/sFireball.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sFireball",
+    "path":"sprites/sFireball/sFireball.yy",
+  },
   "visible":true,
 }

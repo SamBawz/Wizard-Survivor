@@ -5,7 +5,14 @@ if(keyboard_check_pressed(ord("1"))) {
 	QueueElement(1);
 }
 
+if(keyboard_check_pressed(ord("2"))) {
+	QueueElement(2);
+}
+
+if(keyboard_check_pressed(ord("3"))) {
+	QueueElement(3);
+}
+
 if(mouse_check_button_pressed(mb_left)) {
-	var _projectile_angle = image_angle;
 	PlayerCast();
 }

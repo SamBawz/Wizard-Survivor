@@ -6,4 +6,6 @@ if(!instance_exists(oWeaponParent)) {
 
 depth = 1;
 
+experience = 0;
+level = 0;
 character_state = CHARACTER_STATE.IDLE;
