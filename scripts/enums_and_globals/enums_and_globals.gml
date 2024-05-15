@@ -18,13 +18,13 @@ enum ELEMENTS {
 
 global.elements = [ 
 	{id: 0, description: "Void"},
-	{id: 1, description: "Arcane"},
-	{id: 2, description: "Heat"},
-	{id: 3, description: "Cold"},
-	{id: 4, description: "Water"},
-	{id: 5, description: "Air"},
-	{id: 6, description: "Earth"},
+	{id: 1, description: "Arcane", icon: "sArcaneIcon", button: "sArcaneButton"},
+	{id: 2, description: "Heat", icon: "sHeatIcon", button: "sHeatButton"},
+	{id: 3, description: "Cold", icon: "sColdIcon", button: "sColdButton"},
+	{id: 4, description: "Water", icon: "sWaterIcon", button: "sWaterButton"},
+	{id: 5, description: "Air", icon: "sAirIcon", button: "sAirButton"},
+	{id: 6, description: "Earth", icon: "sEarthIcon", button: "sEartButton"},
 
-	{id: 12, description: "Heat+Cold"}, 
-	{id: 13, description: "Steam"}
+	{id: 12, description: "Heat+Cold", obtainable: false}, 
+	{id: 13, description: "Steam", obtainable: true}
 ]

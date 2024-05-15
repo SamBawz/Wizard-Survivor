@@ -46,7 +46,6 @@ function PlayerCast(){
 		}
 	});
 	queued_elements = [];
-	//EXPECTED RESULT = [12,3]
 	show_debug_message(casting_queue);
 	
 	
@@ -60,6 +59,12 @@ function PlayerCast(){
 			with (_fireball) {
 				direction = random_range(other.image_angle - 10,  other.image_angle + 10);
 				speed = 3;
+			}
+			
+			var _fire_circle = instance_create_layer(x, y, "Instances", oFireCircle);
+			with (_fire_circle) {
+				image_angle = oPlayer.image_angle;
+				direction = other.image_angle;
 			}
 		}
 	});

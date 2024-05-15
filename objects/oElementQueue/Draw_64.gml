@@ -1,1 +1,1 @@
-draw_sprite( sElementQueue, 0, x, y);
+draw_sprite( sHotbar, 0, x, y);
