@@ -1,5 +1,3 @@
-GameStart();
-
 if(!instance_exists(oWeaponParent)) {
 	instance_create_layer(x, y, "Instances", oDefaultStaff);
 }

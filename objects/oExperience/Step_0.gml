@@ -13,7 +13,6 @@ if(instance_exists(oPlayer)) {
 		//var _dir = get_direction(_pos,_pPos);
 		
 			var _dir = point_direction(x, y, oPlayer.x, oPlayer.y);
-			show_debug_message(_dir)
 			direction = _dir;
 			speed =  (magnetism-_distance)*0.1;
 

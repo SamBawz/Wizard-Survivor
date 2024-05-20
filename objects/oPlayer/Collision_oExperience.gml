@@ -5,22 +5,8 @@ with(other) {
 	instance_destroy();
 }
 
-switch(level) {
-	case 0:
-	experience+=20;
-	break;
-	case 1:
-	experience+=10;
-	break;
-	default:
-	experience++;
-	break;
-}
+global.current_xp += 50 * global.xp_modifier;
 
-if(experience >= 100) {
-	experience = 0;
-	level++;
-}
 
 
 

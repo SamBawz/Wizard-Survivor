@@ -1,1 +1,0 @@
-draw_sprite( sHotbar, 0, x, y);

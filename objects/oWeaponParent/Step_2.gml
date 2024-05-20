@@ -1,9 +1,7 @@
 /// @description Position logic
 // Put in end step so it more accurately follows the main body
 
-if(global.paused) {
-	exit;
-}
+if (IsObjectPaused()) { exit; }
 
 image_angle = point_direction(oPlayer.x, oPlayer.y, mouse_x, mouse_y);
 if(image_angle >= 270 || image_angle <= 90) {
@@ -13,15 +11,6 @@ else {
 	image_yscale = -1;
 }
 
-if(image_angle > 180) {
-	depth = 0;
-}
-else {
-	depth = initial_depth;
-}
-
 x = oPlayer.x + lengthdir_x(player_distance, image_angle);
 y = oPlayer.y + lengthdir_y(player_distance, image_angle);
-
-depth = -y;
 

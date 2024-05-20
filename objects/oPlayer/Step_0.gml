@@ -1,8 +1,7 @@
-if (global.paused) {
-	exit;
-}
+if (IsObjectPaused()) { exit; }
 
-PlayerMovement();
+var _dash = keyboard_check_pressed(vk_space);
+PlayerMovement(_dash);
 
 switch character_state {
 	case CHARACTER_STATE.IDLE:
@@ -21,9 +20,3 @@ switch character_state {
 	sprite_index = sPlayerDead;
 	exit;
 }
-
-// Set depth to minus our y position.
-// This is also done in enemies, with the
-// result being instances higher up on the screen
-// being drawn first.
-depth = -y;

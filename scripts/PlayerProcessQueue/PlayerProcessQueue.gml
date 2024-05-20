@@ -1,3 +1,5 @@
+//THIS FILE IS DEPRECATED
+
 //All elemental attacks that are queued are fired at once
 //BUT if queue contains combinations, remove those elements from queue and insert combined element
 //Same method for failed combinations (e.g. Heat and Cold) but these don't have replacements

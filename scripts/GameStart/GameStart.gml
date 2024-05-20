@@ -1,3 +1,5 @@
+//THIS FILE IS DEPRECATED
+
 //This script is run by the oPlayer when created
 function GameStart(){
 	if (!layer_exists("Controllers")) {
