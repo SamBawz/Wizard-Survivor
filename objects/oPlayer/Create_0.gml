@@ -1,5 +1,5 @@
 if(!instance_exists(oWeaponParent)) {
-	instance_create_layer(x, y, "Instances", oDefaultStaff);
+	staff = instance_create_layer(x, y, "Instances", oDefaultStaff);
 }
 
 depth = 1;

@@ -2,6 +2,11 @@ if (keyboard_check_pressed(vk_backspace)) {
 	window_set_fullscreen(!window_get_fullscreen());
 }
 
+if(keyboard_check_pressed(ord("R"))) {
+	global.paused = false;
+	game_restart();
+}
+
 //When UI is present, disable pausing
 if(instance_exists(oLevelUpScreen)) {
 	exit;

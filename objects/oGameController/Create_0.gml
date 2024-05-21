@@ -17,7 +17,7 @@ global.xp_modifier = 1 / global.level;
 global.enemy_spawn_speed = 300;
 global.enemy_health_mod = 1;
 
-global.obtained_elements = [2, 3, 0];
+global.obtained_elements = [2, 0, 3];
 
 //Spawn the player
 instance_create_layer(x, y, "Instances", oPlayer);
