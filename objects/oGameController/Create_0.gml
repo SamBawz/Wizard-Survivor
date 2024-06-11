@@ -12,6 +12,7 @@ hotbar_icon_vec = [
 
 global.current_xp = 0;
 global.level = 1;
+global.player_health = 100;
 global.xp_modifier = 1 / global.level;
 
 global.enemy_spawn_speed = 300;

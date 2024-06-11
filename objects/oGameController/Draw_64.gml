@@ -6,6 +6,7 @@ if(instance_exists(oLevelUpScreen)) {
 
 draw_set_alpha(1);
 
+//Exp
 draw_healthbar(10, display_get_gui_height() - 10, display_get_gui_width() - 10, display_get_gui_height() -5, global.current_xp, c_gray, c_gray, c_blue, 0, false, false);
 
 //Draw the hotbar
@@ -22,3 +23,6 @@ array_foreach(global.obtained_elements, function(_element, _i) {
 		}
 	});
 });
+
+//Health
+draw_healthbar(global.hotbar_vec.x - 50, global.hotbar_vec.y - 40, global.hotbar_vec.x + 50, global.hotbar_vec.y - 35, global.player_health, c_gray, c_red, c_red, 0, true, false);

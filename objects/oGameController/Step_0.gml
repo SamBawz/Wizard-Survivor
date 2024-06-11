@@ -2,7 +2,7 @@ if (keyboard_check_pressed(vk_backspace)) {
 	window_set_fullscreen(!window_get_fullscreen());
 }
 
-if(keyboard_check_pressed(ord("R"))) {
+if(keyboard_check_pressed(ord("R")) || global.player_health <= 0) {
 	global.paused = false;
 	game_restart();
 }

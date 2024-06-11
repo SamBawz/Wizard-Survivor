@@ -29,8 +29,12 @@ global.elements = [
 	{id: 6, name: "Earth", description: "Crush your enemies with slow but hard hitting attacks", icon: "sEarthIcon", button: "sEarthButton", obtainable: true},
 	
 
-	{id: 23, name: "Heat+Cold", description: "Heat+Cold", obtainable: false}, 
-	{id: 24, name: "Steam", description: "Steam", icon: "sSteamIcon", button: "sSteamButton", obtainable: true}
+	{id: 23, name: "Cancel", description: "Heat+Cold", obtainable: false}, 
+	{id: 24, name: "Steam", description: "Steam", icon: "sSteamIcon", button: "sSteamButton", obtainable: true},
+	{id: 26, name: "Magma", description: "Heat+Earth", obtainable: false},
+	{id: 25, name: "Pressure", description: "Heat+Air", obtainable: false},
+	{id: 34, name: "Ice", description: "Cold+Water", obtainable: false},
+	{id: 35, name: "Vacuum", description: "Cold+Air", obtainable: false},
 ]
 
 //datastructure maps are used to store key and values together in pairs

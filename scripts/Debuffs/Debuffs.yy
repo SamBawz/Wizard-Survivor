@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Debuffs",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Debuffs",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
