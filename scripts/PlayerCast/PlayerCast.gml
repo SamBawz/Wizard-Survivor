@@ -46,12 +46,12 @@ function PlayerCast(){
 		switch(_element) {
 			
 			//Heat
-			case 2:
+			case 1:
 			var _fire_circle = instance_create_layer(x, y, "Instances", oFireCircle, {fire_direction : image_angle, fire_duration: _strength * 50 });
 			break;
 			
 			//Cold
-			case 3:
+			case 2:
 			for(_i = 0; _strength > _i; _i++) {
 				var _fireball = instance_create_layer(x, y, "Instances", oFireball);
 				with (_fireball) {
@@ -63,15 +63,15 @@ function PlayerCast(){
 			break;
 			
 			//Water
-			case 4:
+			case 3:
 			break;
 			
 			//Air
-			case 5:
+			case 4:
 			break;
 			
 			//Earth
-			case 6:
+			case 5:
 			var _boulder = instance_create_layer(x, y, "Instances", oBoulder);
 			with (_boulder) {
 				direction = other.image_angle;
@@ -80,23 +80,25 @@ function PlayerCast(){
 			break;
 			
 			//Steam
-			case 24:
+			case 13:
 			var _steam_circle = instance_create_layer(x, y, "Instances", oSteamCircle, {fire_direction : image_angle, fire_duration: _strength * 50 });
 			break;
 			
 			//Magma
-			case 26:
+			case 15:
 			break;
 			
 			//Pressure
-			case 25:
+			case 14:
 			break;
 			
 			//Vacuum
-			case 35:
+			case 24:
 			break;
 			
+			//Failed spells
 			default:
+			
 			break;
 		}
 	});

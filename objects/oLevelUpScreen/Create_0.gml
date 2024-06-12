@@ -10,9 +10,10 @@ selection_index = 1;
 upgrade_list = ds_list_create();
 
 //Get the first 6 obtainable elements. These are the basic elements.
+//Arcane is temporarily removed, so right now there's 5 elements
 obtained = 1;
 array_foreach(global.elements, function(_element, _index) {
-	if(obtained > 6) { exit; }
+	if(obtained > 5) { exit; }
 	else if(_element.obtainable) {
 		obtained++;
 		ds_list_add(upgrade_list, _element);

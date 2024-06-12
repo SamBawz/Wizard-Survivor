@@ -4,6 +4,8 @@ player_distance = 5;
 queued_elements = [];
 floating_icon_vec = {x:0, y:0};
 
+casting_animation = false;
+
 
 function QueueElement(_i) {
 	hotbar_index = _i;

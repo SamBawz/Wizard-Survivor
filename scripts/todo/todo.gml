@@ -27,4 +27,16 @@ Create a death state and gameover screen
 8. 
 Level up animation!
 
+important:
+map boundaries
+animation for failed spells > puff of smoke
+earth boulder animation and physics
+water spells
+remove arcane temporarily
+fix ui; move xp and health bar
+enemy sprites and walking animations
+shadows
+tutorial screens
+gameover screen
+
 */
