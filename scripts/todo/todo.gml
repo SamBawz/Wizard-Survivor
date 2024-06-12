@@ -24,4 +24,7 @@ Create a boundary with invisible solid objects and collision detection
 7.
 Create a death state and gameover screen
 
+8. 
+Level up animation!
+
 */
