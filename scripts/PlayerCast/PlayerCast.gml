@@ -62,9 +62,38 @@ function PlayerCast(){
 			}
 			break;
 			
+			//Water
+			case 4:
+			break;
+			
+			//Air
+			case 5:
+			break;
+			
+			//Earth
+			case 6:
+			var _boulder = instance_create_layer(x, y, "Instances", oBoulder);
+			with (_boulder) {
+				direction = other.image_angle;
+				speed = 4;
+			}
+			break;
+			
 			//Steam
 			case 24:
 			var _steam_circle = instance_create_layer(x, y, "Instances", oSteamCircle, {fire_direction : image_angle, fire_duration: _strength * 50 });
+			break;
+			
+			//Magma
+			case 26:
+			break;
+			
+			//Pressure
+			case 25:
+			break;
+			
+			//Vacuum
+			case 35:
 			break;
 			
 			default:

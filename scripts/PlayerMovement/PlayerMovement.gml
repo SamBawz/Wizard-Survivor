@@ -35,10 +35,10 @@ function PlayerMovement(_dash){
 	
 	if (hspeed != 0)
 	{
-		image_xscale = 1 * -sign(hspeed);
+		image_xscale = 1 * sign(hspeed);
 	}
 	
-	if(character_state != CHARACTER_STATE.DAMAGED || character_state != CHARACTER_STATE.DEAD) {
+	if(character_state != CHARACTER_STATE.DAMAGED && character_state != CHARACTER_STATE.DEAD) {
 		if (speed > 0) {
 			character_state = CHARACTER_STATE.MOVING;
 		}

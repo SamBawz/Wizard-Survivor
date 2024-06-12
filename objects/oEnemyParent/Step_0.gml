@@ -1,5 +1,10 @@
 if(global.paused) {exit;}
 
+//Activate current debuffs
+for(var _i = 0; _i < ds_list_size(debuff_list); _i++;) {
+	activateDebuff(debuff_list[| _i]);
+}
+
 if(instance_exists(oPlayer)) {
 	direction = point_direction(x, y, oPlayer.x, oPlayer.y);
 }

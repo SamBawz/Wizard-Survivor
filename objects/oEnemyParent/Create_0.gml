@@ -6,3 +6,5 @@ speed = 0.75;
 
 invincibility_time = 100;
 invincibility_list = ds_list_create();
+
+debuff_list = ds_list_create();

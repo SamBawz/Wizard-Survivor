@@ -1,5 +1,5 @@
 initial_depth = 2;
-player_distance = 10;
+player_distance = 5;
 
 queued_elements = [];
 floating_icon_vec = {x:0, y:0};

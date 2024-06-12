@@ -35,6 +35,7 @@
   "ResourceOrderSettings":[
     {"name":"fMedium","order":1,"path":"fonts/fMedium/fMedium.yy",},
     {"name":"fSmall","order":2,"path":"fonts/fSmall/fSmall.yy",},
+    {"name":"oBoulder","order":5,"path":"objects/oBoulder/oBoulder.yy",},
     {"name":"oExperienceSpawner","order":1,"path":"objects/oExperienceSpawner/oExperienceSpawner.yy",},
     {"name":"oFireCircle","order":1,"path":"objects/oFireCircle/oFireCircle.yy",},
     {"name":"oGameOver","order":2,"path":"objects/oGameOver/oGameOver.yy",},
@@ -54,8 +55,9 @@
     {"name":"PlayerCast","order":4,"path":"scripts/PlayerCast/PlayerCast.yy",},
     {"name":"PlayerCastBackUp","order":9,"path":"scripts/PlayerCastBackUp/PlayerCastBackUp.yy",},
     {"name":"PlayerProcessQueue","order":5,"path":"scripts/PlayerProcessQueue/PlayerProcessQueue.yy",},
-    {"name":"todo","order":10,"path":"scripts/todo/todo.yy",},
+    {"name":"Debuffs","order":11,"path":"scripts/Debuffs/Debuffs.yy",},
     {"name":"SetGUI","order":8,"path":"scripts/SetGUI/SetGUI.yy",},
+    {"name":"todo","order":10,"path":"scripts/todo/todo.yy",},
     {"name":"sAirButton","order":8,"path":"sprites/sAirButton/sAirButton.yy",},
     {"name":"sAirIcon","order":3,"path":"sprites/sAirIcon/sAirIcon.yy",},
     {"name":"sAKey","order":4,"path":"sprites/sAKey/sAKey.yy",},
