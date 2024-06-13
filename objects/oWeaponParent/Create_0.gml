@@ -17,3 +17,16 @@ function QueueElement(_i) {
 		}
 	});
 }
+
+//Emitter
+part_failed = part_type_create();
+part_type_shape(part_failed, pt_shape_square);
+part_type_size(part_failed, 1, 1, -0.03, 0);
+part_type_scale(part_failed, 0.1, 0.1);
+part_type_speed(part_failed, 0.5, 1, 0, 0);
+part_type_direction(part_failed, 75, 105, 0, 0);
+part_type_colour3(part_failed, $676767, $808080, $343434);
+part_type_life(part_failed, 40, 40);
+
+part_emit_failed = part_emitter_create(global.spell_ps);
+

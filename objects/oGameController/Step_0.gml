@@ -4,6 +4,7 @@ if (keyboard_check_pressed(vk_backspace)) {
 
 if(keyboard_check_pressed(ord("R")) || global.player_health <= 0) {
 	global.paused = false;
+	part_emitter_destroy_all(global.spell_ps);
 	game_restart();
 }
 

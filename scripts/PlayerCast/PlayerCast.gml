@@ -40,7 +40,6 @@ function PlayerCast(){
 	
 	
 	//Cast the damn spell
-	var _projectile_angle = image_angle;
 	array_foreach(casting_queue, function(_element, _index) {
 		var _strength = CountElementAmount(_element);
 		switch(_element) {
@@ -52,7 +51,7 @@ function PlayerCast(){
 			
 			//Cold
 			case 2:
-			for(_i = 0; _strength > _i; _i++) {
+			for(_i = 0; _strength * 2 > _i; _i++) {
 				var _fireball = instance_create_layer(x, y, "Instances", oFireball);
 				with (_fireball) {
 				image_angle = other.image_angle;
@@ -72,10 +71,10 @@ function PlayerCast(){
 			
 			//Earth
 			case 5:
-			var _boulder = instance_create_layer(x, y, "Instances", oBoulder);
+			var _boulder = instance_create_layer(x + lengthdir_x(10, image_angle), y + lengthdir_y(10, image_angle), "Instances", oBoulder);
 			with (_boulder) {
+				strength = _strength;
 				direction = other.image_angle;
-				speed = 4;
 			}
 			break;
 			
@@ -96,10 +95,12 @@ function PlayerCast(){
 			case 24:
 			break;
 			
+			case 0:
+			break;
+			
 			//Failed spells
 			default:
-			
-			break;
+			part_emitter_burst(global.spell_ps, part_emit_failed, part_failed, 5);
 		}
 	});
 }

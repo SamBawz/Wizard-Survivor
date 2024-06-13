@@ -3,7 +3,7 @@ layer_element_move(self, "GUI");
 
 //Hotbar positioning
 hotbar_index = 0;
-global.hotbar_vec = {x: display_get_gui_width() / 2, y: display_get_gui_height() - 30};
+global.hotbar_vec = {x: display_get_gui_width() / 2, y: display_get_gui_height() - 22};
 hotbar_icon_vec = [ 
 	{x: global.hotbar_vec.x - 21, y: global.hotbar_vec.y}, 
 	{x: global.hotbar_vec.x, y: global.hotbar_vec.y}, 

@@ -12,6 +12,6 @@ function TakeDamage(_amount) {
 	if (character_state != CHARACTER_STATE.DAMAGED) {
 		character_state = CHARACTER_STATE.DAMAGED;
 		global.player_health -= _amount;
-		alarm[0] = 100;
+		alarm[0] = 50;
 	}
 }
