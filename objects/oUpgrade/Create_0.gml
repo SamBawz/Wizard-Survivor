@@ -1,7 +1,11 @@
 depth = 0;
+image_speed = 0;
 
 mouse_over = false;
 is_clicked = false;
+
+interactable = false;
+alarm[1] = 45; 
 
 //Compare this element to all global.obtained_elemements
 //Then draw relevant sprites on selection_bar_vecs

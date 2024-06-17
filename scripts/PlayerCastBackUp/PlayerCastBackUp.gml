@@ -67,8 +67,8 @@ function PlayerCasdasdt(){
 			//Cold
 			case 3:
 			for(_i = 0; _strength > _i; _i++) {
-				var _fireball = instance_create_layer(x, y, "Instances", oFireball);
-				with (_fireball) {
+				var _Snowball = instance_create_layer(x, y, "Instances", oSnowball);
+				with (_Snowball) {
 				image_angle = other.image_angle;
 				direction = random_range(other.image_angle - 10,  other.image_angle + 10);
 				speed = 3;

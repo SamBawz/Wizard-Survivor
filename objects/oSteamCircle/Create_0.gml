@@ -7,7 +7,7 @@ image_speed = 0;
 
 alarm[0] = fire_duration;
 
-hitbox = instance_create_layer(x, y, "instances", oFireHitbox, {image_angle : fire_direction});
+hitbox = instance_create_layer(x, y, "instances", oFireHitbox, {image_angle : fire_direction, steam: true});
 
 //Emitter
 ptype1 = part_type_create();

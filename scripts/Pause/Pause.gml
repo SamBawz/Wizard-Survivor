@@ -13,9 +13,20 @@ function PauseGame() {
 		paused_animation = image_speed;
 		speed = 0;
 		image_speed = 0;
+		
+		//Save all alarms except for... exceptions
+		var _name = object_get_name(object_index)
+		if (_name != "oUpgrade" && _name != "oGameOver") {
+			alarm_list = ds_list_create();
+			for(var _i = 0; _i < 12; _i += 1){
+			ds_list_add(alarm_list, alarm[_i]);
+			alarm[_i] = -1;//stop alarm from happening
+			}
+		}
 	}
 	//Pause relevant ps systems
 	part_system_automatic_update(global.spell_ps, false);
+	part_system_automatic_update(global.moving_spell_ps, false);
 }
 
 function UnpauseGame() {
@@ -24,16 +35,28 @@ function UnpauseGame() {
 	global.paused = false;
 
 	with (all) {
-		speed = paused_speed;
-		image_speed = paused_animation;
+		if(variable_instance_exists(id, "paused_speed") && variable_instance_exists(id, "image_speed")) {
+			speed = paused_speed;
+			image_speed = paused_animation;
+		}
+		
+		//Unpause all alarms
+		if(variable_instance_exists(id, "alarm_list")) {
+			var _len = ds_list_size(alarm_list);
+			for(var _i = 0; _i < _len; _i += 1){
+				alarm[_i] = ds_list_find_value(alarm_list, _i);
+			}
+			ds_list_destroy(alarm_list);
+		}
 	}
 	part_system_automatic_update(global.spell_ps, true);
+	part_system_automatic_update(global.moving_spell_ps, true);
 }
 
 //This function is ran by multiple objects to see if the game is paused or a menu screen is present
 //Disable extra object logic with exit; when true
 function IsObjectPaused() {
-	if(global.paused || instance_exists(oLevelUpScreen)) {
+	if(global.paused || instance_exists(oLevelUpScreen) || instance_exists(oGameOver)) {
 		return true;
 	} 
 }

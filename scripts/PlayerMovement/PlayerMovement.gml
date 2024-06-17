@@ -1,12 +1,36 @@
+global.dash_vec = {x: 0, y: 0};
+function PlayerDash(_x, _y) {
+	if(oPlayer.character_state != CHARACTER_STATE.DEAD) {
+		global.dash_vec.x = _x;
+		global.dash_vec.y = _y;
+		oPlayer.speed = 5;
+		oPlayer.direction = point_direction(oPlayer.x, oPlayer.y, _x, _y);
+		oPlayer.character_state = CHARACTER_STATE.DASHING;
+		oPlayer.alarm[0] = 50;
+	}
+}
+
 function PlayerMovement(_dash){
 	//TODO add dash cooldown and temporary dash state (1 tick is not enough time)
 	var _max_speed = _dash? 4 : 2;
 	var _speed_mod = _dash? 2 : 1;
-	speed = 0;
+	
 	
 	if(character_state = CHARACTER_STATE.DEAD) {
 		exit;
 	}
+	
+	if(character_state = CHARACTER_STATE.DASHING) {
+		//Return to non-dash state when approaching destination
+		if(point_distance(x, y, global.dash_vec.x, global.dash_vec.y) < 5) {
+			character_state = CHARACTER_STATE.IDLE;
+			with (oDashTornado) {instance_destroy();}
+			alarm[0] = -1;
+		}
+		exit;
+	}
+	
+	speed = 0;
 	
 	if (keyboard_check(ord("W")))
 	{

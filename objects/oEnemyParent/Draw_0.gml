@@ -1,20 +1,24 @@
-if(direction > 90 && direction < 270) {
-	image_yscale = -1;
+//shaders
+if(flash > 0) {
+	flash -=1;
+    shader_set(shadEnemyFlash);
 }
-else {
-	image_yscale = 1;
-}
-
-if(global.paused) {
-	draw_self()
-}
-else {
-	var _t = current_time * 0.01;
-	draw_sprite_ext(object_get_sprite(object_index), image_index, x, y + sin(_t) * 0.75, image_xscale, image_yscale, 0 + sin(_t) * 2, c_white, 1);
+else if(frozen) {
+	shader_set(shadEnemyFrozen);
 }
 
-draw_set_font(fMedium);
-if(ds_list_size(debuff_list) > 0) {
-	draw_text(x, y, string(debuff_list[| 0].stacks));
+if(!frozen && !IsObjectPaused()) {
+	if(direction > 90 && direction < 270) {
+	image_xscale = -1;
+	}
+	else {
+	image_xscale = 1;
+	}
+	animation_time = current_time * 0.01;
 }
+
+draw_sprite_ext(object_get_sprite(object_index), image_index, x, y + sin(animation_time) * jump_mod,  min(1, image_xscale + sin(animation_time) * xscale_mod), max(1, image_yscale + sin(animation_time) * yscale_mod), 0 + sin(animation_time) * rotate_mod, c_white, 1);
+
+//reset shaders
+shader_reset();
 

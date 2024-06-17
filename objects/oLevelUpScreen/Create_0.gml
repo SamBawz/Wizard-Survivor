@@ -1,3 +1,5 @@
+animation_playing = false;
+
 selection_bar_pos = {x: display_get_gui_width() / 2, y: 194}
 selection_bar_index = 0;
 selection_bar_vecs = [
@@ -9,11 +11,12 @@ selection_index = 1;
 
 upgrade_list = ds_list_create();
 
-//Get the first 6 obtainable elements. These are the basic elements.
+//Get the first 6 obtainable elements. These are the basic elements. Get one less if there's too many familiars so players can't get more than 4.
 //Arcane is temporarily removed, so right now there's 5 elements
 obtained = 1;
+if(instance_number(oFamiliar) >= 4) {obtained = 2}
 array_foreach(global.elements, function(_element, _index) {
-	if(obtained > 5) { exit; }
+	if(obtained > 6) { exit; }
 	else if(_element.obtainable) {
 		obtained++;
 		ds_list_add(upgrade_list, _element);

@@ -25,18 +25,26 @@ Create a boundary with invisible solid objects and collision detection
 Create a death state and gameover screen
 
 8. 
-Level up animation!
+Level up animation! that pushes back enemies afterwards so you wont get hit after coming out of a menu
 
 important:
-map boundaries
-animation for failed spells > puff of smoke
-earth boulder animation and physics
-water spells
-remove arcane temporarily
-fix ui; move xp and health bar
-enemy sprites and walking animations
-shadows
-tutorial screens
+map boundaries - check!
+animation for failed spells > puff of smoke - check!
+earth boulder animation and physics - check!
+water spell logic - check!
+remove arcane temporarily - check!
+fix ui; move xp and health bar - check!
+enemy sprites and walking animations - check!
+shadows - check!
+tutorial screens - check!
 gameover screen
+cursor updates - check!
+fix enemy spawn rate and enemy limit
+fix xp rates
+set timer on xp drop with flashing
+fix burning indicator - check!
+cooldown on upgrade screen so players dont accidentally pick something - check!
+this cooldown on death screen too - check!
+Level up animation! that pushes back enemies afterwards so you wont get hit after coming out of a menu
 
 */

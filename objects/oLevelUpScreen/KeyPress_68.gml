@@ -1,2 +1,5 @@
 /// @description Move arrow selection
-selection_index = min(selection_index+1, 2);
+if(!animation_playing) {
+	selection_index = min(selection_index+1, 2);
+}
+

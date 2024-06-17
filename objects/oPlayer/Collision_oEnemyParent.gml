@@ -1,1 +1,3 @@
-TakeDamage(10);
+if(!other.frozen) {
+	TakeDamage(10);
+}

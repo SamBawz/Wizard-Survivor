@@ -52,28 +52,34 @@ function PlayerCast(){
 			//Cold
 			case 2:
 			for(_i = 0; _strength * 2 > _i; _i++) {
-				var _fireball = instance_create_layer(x, y, "Instances", oFireball);
-				with (_fireball) {
-				image_angle = other.image_angle;
+				var _Snowball = instance_create_layer(x, y, "Instances", oSnowball);
+				with (_Snowball) {
 				direction = random_range(other.image_angle - 10,  other.image_angle + 10);
-				speed = 3;
 				}
 			}
 			break;
 			
 			//Water
 			case 3:
+			if(instance_exists(oBubble)) {
+				with(oBubble) {alarm[0] = base_duration * strength}
+			}
+			else {
+				var _bubble = instance_create_layer(x, y, "Instances", oBubble, { strength: _strength });
+			}
 			break;
 			
 			//Air
 			case 4:
+			var _tornado_dash = instance_create_layer(x, y, "Instances", oDashTornado);
+			with (_tornado_dash) { strength = _strength }
+			PlayerDash(mouse_x, mouse_y);
 			break;
 			
 			//Earth
 			case 5:
-			var _boulder = instance_create_layer(x + lengthdir_x(10, image_angle), y + lengthdir_y(10, image_angle), "Instances", oBoulder);
+			var _boulder = instance_create_layer(x + lengthdir_x(10, image_angle), y + lengthdir_y(10, image_angle), "Instances", oBoulder, { strength: _strength });
 			with (_boulder) {
-				strength = _strength;
 				direction = other.image_angle;
 			}
 			break;
@@ -85,10 +91,17 @@ function PlayerCast(){
 			
 			//Magma
 			case 15:
+			if(instance_exists(oMagma)) {with(oMagma) {despawn = true;}}
+			var _magma = instance_create_layer(mouse_x, mouse_y, "Instances", oMagma, { strength: _strength });
 			break;
 			
 			//Pressure
 			case 14:
+			break;
+			
+			//Ice
+			case 23:
+			var _icicle_bolt = instance_create_layer(x, y, "Instances", oIcicleBolt, { direction: image_angle, _strength: _strength });
 			break;
 			
 			//Vacuum
@@ -155,4 +168,12 @@ function CountElementAmount(_i) {
 		}
 	});
 	return function_element_amount;
+}
+
+function getElementName(_id) {
+	for(var _i = 0; _i < array_length(global.elements); _i++) {
+		if(global.elements[_i].id == _id) {
+			return global.elements[_i].name;
+		}
+	}
 }

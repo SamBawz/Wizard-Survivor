@@ -1,6 +1,5 @@
-/// @description Draw the floating icons above the player
+/// @description Draw icons above player
 draw_self();
-
 floating_icon_vec = {x: oPlayer.x - 16, y: oPlayer.y - 15};
 array_foreach(queued_elements, function(_element, _i) {
 	floating_icon_vec.x += 8;

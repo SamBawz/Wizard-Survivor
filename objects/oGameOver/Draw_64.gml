@@ -1,0 +1,1 @@
+draw_sprite_ext(sDeathScreen, -1, display_get_gui_width() / 2, display_get_gui_height() / 2, 1.12, 1.12, 0, c_white, 1);

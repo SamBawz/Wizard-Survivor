@@ -20,3 +20,7 @@ if(mouse_check_button_pressed(mb_left) && casting_animation = false && array_len
 	alarm[0] = 50;
 	PlayerCast();
 }
+
+if(mouse_check_button(mb_right)) {
+	queued_elements = [];
+}

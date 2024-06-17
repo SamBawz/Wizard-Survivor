@@ -6,7 +6,7 @@ if(device_mouse_x_to_gui(0) > bbox_left && device_mouse_x_to_gui(0) < bbox_right
 	mouse_over = true;
 }
 
-if(mouse_over) {
+if(mouse_over && interactable) {
 	
 	if(mouse_check_button_pressed(mb_left)) {
 		is_clicked = true;
@@ -16,22 +16,11 @@ if(mouse_over) {
 	if(is_clicked) {
 		if (mouse_check_button_released(mb_left)) {
 			
-			//If there is a valid combination and its obtainable, set it
-			if(CheckCombinations(element.id, global.obtained_elements[oLevelUpScreen.selection_index]) != false && IsEleObtainable(CheckCombinations(element.id, global.obtained_elements[oLevelUpScreen.selection_index]))) {
-				global.obtained_elements[oLevelUpScreen.selection_index] = CheckCombinations(element.id, global.obtained_elements[oLevelUpScreen.selection_index]);
-			}
-			 //Otherwise set this element
-			else {
-				global.obtained_elements[oLevelUpScreen.selection_index] = element.id;
-			}
-			
-			//The game controller paused in the first place so it still holds all saved variables for unpausing
-			with(oGameController) {
-				UnpauseGame();
-			}
-			with(oLevelUpScreen) {
-				instance_destroy();
-			}
+			//Start animation and disable further inputs
+			interactable = false;
+			oLevelUpScreen.animation_playing = true;
+			image_speed = 1;
+			alarm[0] = 35;
 		}
 	}
 }

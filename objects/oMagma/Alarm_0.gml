@@ -1,0 +1,2 @@
+/// @description despawn
+despawn = true;
