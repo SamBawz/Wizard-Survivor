@@ -1,10 +1,10 @@
-x_scale_target = 1.5;
-y_scale_target = 1.5;
+scale_target = 1 + 0.5 * strength;
+
 image_xscale = 0;
 image_yscale = 0;
 
 despawn = false;
-alarm[0] = 60 * strength;
+alarm[0] = 50 + 50 * strength;
 
 part_burning = part_type_create();
 part_type_shape(part_burning, pt_shape_square);

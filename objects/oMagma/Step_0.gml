@@ -1,5 +1,5 @@
 if(!despawn) {
-	if(image_xscale < x_scale_target) {
+	if(image_xscale < scale_target) {
 		image_xscale+= 0.075;
 		image_yscale+= 0.075;
 	}

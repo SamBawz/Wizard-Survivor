@@ -16,3 +16,4 @@ draw_set_valign(fa_top);
 draw_set_font(fLarge);
 draw_text_transformed(x, y-25, element.name, 0.5, 0.5, 0);
 draw_text_ext_transformed(x, y-10, element.description, 19, 120,  0.4, 0.4, 0);
+draw_sprite_ext(asset_get_index(element.button), 0, x-1, y-46, 0.9, 0.9, 0, c_white, 1);

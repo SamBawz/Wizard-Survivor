@@ -7,7 +7,8 @@ if(instance_exists(oGameOver)) {exit;}
 if(keyboard_check_pressed(ord("R")) || global.player_health <= 0) {
 	if(global.paused) {UnpauseGame();}
 	//else {PauseGame(); UnpauseGame();}
-	instance_create_layer(0, 0, "Menus", oGameOver);
+	part_emitter_destroy_all(global.spell_ps);
+	game_restart();
 }
 
 //When UI is present, disable pausing and enemy spawning

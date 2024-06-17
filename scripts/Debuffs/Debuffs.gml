@@ -56,6 +56,8 @@ function reduceStackDuration(_debuff) {
 	}
 	if(_debuff.stacks < 1) {
 		ds_list_delete(debuff_list, returnListItemIndex(debuff_list, _debuff.id));
+		//For chill specifically
+		if(_debuff.id = 2) { speed = starting_speed; }
 	}
 }
 
