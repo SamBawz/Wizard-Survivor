@@ -28,7 +28,7 @@ global.elements = [
 	{id: 1, name: "Heat", description: "Create a flamethrower, setting your foes on fire and dealing consistant damage", icon: "sHeatIcon", button: "sHeatButton", obtainable: true},
 	{id: 2, name: "Cold", description: "Freeze your enemies with icicles and then shatter them to create chain reactions", icon: "sColdIcon", button: "sColdButton", obtainable: true},
 	{id: 3, name: "Water", description: "Block incoming attacks with a bubble shield and then retaliate with a violent 'pop'", icon: "sWaterIcon", button: "sWaterButton", obtainable: true},
-	{id: 4, name: "Air", description: "Ride gusts of wind, becoming invulnerable and damaging nearby enemies", icon: "sAirIcon", button: "sAirButton", obtainable: true},
+	{id: 4, name: "Air", description: "Ride gusts of wind towards your cursor, becoming invulnerable and damaging nearby enemies", icon: "sAirIcon", button: "sAirButton", obtainable: true},
 	{id: 5, name: "Earth", description: "Crush your enemies with slow but hard hitting piercing attacks", icon: "sEarthIcon", button: "sEarthButton", obtainable: true},
 	{id: 6, name: "Familiar", description: "Obtain a familiar that will occasionally attack enemies - this does not replace an element", icon: "sArcaneIcon", button: "sArcaneButton", obtainable: true},
 	{id: 7, name: "Arcane", description: "Add homing to your other spell attacks", icon: "sArcaneIcon", button: "sArcaneButton", obtainable: false},

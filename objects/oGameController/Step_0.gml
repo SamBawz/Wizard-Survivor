@@ -4,7 +4,10 @@ if (keyboard_check_pressed(vk_backspace)) {
 
 if(instance_exists(oGameOver)) {exit;}
 
-if(keyboard_check_pressed(ord("R")) || global.player_health <= 0) {
+if(global.player_health <= 0) {
+	instance_create_layer(x, y, "Menus", oGameOver);
+}
+else if(keyboard_check_pressed(ord("R"))) {
 	if(global.paused) {UnpauseGame();}
 	//else {PauseGame(); UnpauseGame();}
 	part_emitter_destroy_all(global.spell_ps);
