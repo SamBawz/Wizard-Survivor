@@ -2,6 +2,7 @@ initial_depth = 2;
 player_distance = 5;
 
 queued_elements = [];
+saved_queued_elements = [];
 floating_icon_vec = {x:0, y:0};
 
 casting_animation = false;
@@ -19,6 +20,26 @@ function QueueElement(_i) {
 			}
 		}
 	});
+}
+
+function prepareCast() {
+	part_emitter_region(global.spell_ps, part_emit_failed, x, x, y-5, y-5, ps_shape_rectangle, ps_distr_linear);
+	casting_animation = true;
+	alarm[0] = 45;
+	PlayerCast();
+}
+
+//Check if the saved queue should be deleted because the player replaced an element that they had saved
+function deleteSavedQueue() {
+	var _equals = 0;
+	for(var _i = 0; _i < array_length(saved_queued_elements); _i++) {
+		for(var _s = 0; _s < array_length(global.obtained_elements); _s++) {
+			if(saved_queued_elements[_i] == global.obtained_elements[_s]) {
+				_equals++;
+			}
+		}
+	}
+	if(_equals != 3) {saved_queued_elements = [];}
 }
 
 //Failed spell emitter

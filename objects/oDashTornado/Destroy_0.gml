@@ -1,2 +1,2 @@
 /// @description Clean up
-part_emitter_destroy(global.moving_spell_ps, part_emit_tornado);
+part_emitter_destroy(global.tornado_ps, part_emit_tornado);

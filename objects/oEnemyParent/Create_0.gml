@@ -10,6 +10,7 @@ yscale_mod = 0;
 xscale_mod = 0;
 flash = 0;
 frozen = false;
+stunned = false;
 animation_time = current_time * 0.01;
 //speed
 starting_speed =  0.75;

@@ -1,4 +1,4 @@
-image_direction = choose(0.1,-0.1);
+//image_direction = choose(0.1,-0.1);
 target_scale = 1;
 despawn = false;
 alarm[0] = 90;

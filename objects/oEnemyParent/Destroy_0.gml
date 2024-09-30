@@ -3,6 +3,7 @@ instance_create_layer(x, y, "Instances", oExperience);
 //Data structure lists dont clean themselves
 ds_list_destroy(debuff_list);
 ds_list_destroy(invincibility_list);
+destroyDebuffEmitters();
 
 if(frozen) {
 	for(var _i = 0; _i < 7; _i++) {

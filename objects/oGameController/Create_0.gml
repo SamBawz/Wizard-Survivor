@@ -19,7 +19,7 @@ enemy_spawn_speed = 120;
 spawn_limit = 50;
 global.enemy_additive_defense_mod = 1;
 
-global.obtained_elements = [1, 0, 0];
+global.obtained_elements = [1, 24, 0];
 
 //Spawn the player
 instance_create_layer(x, y, "Instances", oPlayer);

@@ -14,4 +14,7 @@ Ivan Voirol
 
 lava tile:
 https://opengameart.org/content/16x16-and-animated-lava-tile-45-frames
+
+lightning sprite:
+https://opengameart.org/content/pixel-lightning
 */

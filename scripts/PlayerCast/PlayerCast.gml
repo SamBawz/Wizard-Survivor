@@ -104,8 +104,12 @@ function PlayerCast(){
 			var _icicle_bolt = instance_create_layer(x, y, "Instances", oIcicleBolt, { direction: image_angle, _strength: _strength });
 			break;
 			
-			//Vacuum
+			//Lightning
 			case 24:
+			//var _lightning_bolt = instance_create_layer(x, y, "Instances", oLightningBolt, {direction: image_angle});
+			for(var _i = 0; _i < 2 + _strength; _i++) {
+				var _lightning_bolt = instance_create_layer(x, y, "Instances", oLightningHeader, {direction: image_angle});
+			}
 			break;
 			
 			case 0:

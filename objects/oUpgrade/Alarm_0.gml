@@ -21,6 +21,7 @@ if(element.id = 6) {
 else if(CheckCombinations(element.id, global.obtained_elements[oLevelUpScreen.selection_index]) != false && IsEleObtainable(CheckCombinations(element.id, global.obtained_elements[oLevelUpScreen.selection_index]))) {
 	var _combination =  CheckCombinations(element.id, global.obtained_elements[oLevelUpScreen.selection_index]);
 	global.obtained_elements[oLevelUpScreen.selection_index] =_combination;
+	oWeaponParent.deleteSavedQueue();
 	with(oGameController) {
 		announce("You obtained " + string(getElementName(_combination)) + "!");
 	}	
@@ -29,6 +30,7 @@ else if(CheckCombinations(element.id, global.obtained_elements[oLevelUpScreen.se
 //Otherwise set this element
 else {
 	global.obtained_elements[oLevelUpScreen.selection_index] = element.id;
+	oWeaponParent.deleteSavedQueue();
 	with(oGameController) {
 		announce("You obtained " + string(other.element.name) + "!");
 	}	

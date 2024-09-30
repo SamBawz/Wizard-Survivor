@@ -43,6 +43,38 @@ function activateDebuff(_debuff) {
 		reduceStackDuration(_debuff);
 		break;
 		
+		//Charged
+		case 4:
+		part_emitter_region(global.spell_ps, part_emit_charged, x - sprite_width / 3, x + sprite_width / 3, y - sprite_height / 3, y + sprite_height / 3, ps_shape_rectangle, ps_distr_linear);
+		part_emitter_enable(global.spell_ps, part_emit_charged, true);
+		_debuff.duration--;
+		if(_debuff.duration < 1) {
+			part_emitter_enable(global.spell_ps, part_emit_charged, false);
+			//exponential damage based on stacks
+			current_hp-=max(6, 30 * (sqr(_debuff.stacks) / 10)) * damage_mod;
+			flash = 15;
+			instance_create_layer(x, y, "Instances", oStaticImpact, { scale: 0.2 * _debuff.stacks });
+			ds_list_delete(debuff_list, returnListItemIndex(debuff_list, _debuff.id));
+			if(_debuff.stacks >= 4) {
+				applyDebuff(5);
+			}
+		}
+		break;
+		
+		//Stunned
+		case 5:
+		_debuff.duration--;
+		if(_debuff.duration < 1) {
+			stunned = false;
+			speed = starting_speed;
+			ds_list_delete(debuff_list, returnListItemIndex(debuff_list, _debuff.id));
+		}
+		else {
+			stunned = true;
+			speed = 0;
+		}
+		break;
+		
 		default: 
 		break;
 	}
@@ -108,6 +140,29 @@ function applyDebuff(_debuff_id) {
 		}
 		break;
 		
+		//Charged
+		case 4:
+		_debuff = {
+			id: 4,
+			name: "charged",
+			stacks: 1,
+			max_stacks: 5,
+			initial_duration: 200,
+			duration: 200
+		}
+		break;
+		
+		//Stunned
+		case 5:
+		_debuff = {
+			id: 5,
+			name: "stunned",
+			stacks: 1,
+			max_stacks: 1,
+			initial_duration: 50,
+			duration: 50
+		}
+		
 		default:
 		break;
 	}
@@ -162,4 +217,26 @@ function initializeDebuffEmitters() {
 	part_type_blend(part_burning, false);
 	part_type_life(part_burning, 20, 20);
 	part_emit_burning = part_emitter_create(global.spell_ps);
+	
+
+	//Charged
+	part_charged = part_type_create();
+	part_type_sprite(part_charged, GM_Electricity_spr_Electricity1, false, true, false)
+	part_type_size(part_charged, 2, 4, 0, 0);
+	part_type_scale(part_charged, 0.06, 0.06);
+	part_type_direction(part_charged, 0, 360, 0.1, 0);
+	part_type_orientation(part_charged, 0, 360, 0, 0, false);
+	part_type_colour3(part_charged, $A665FF, $FF2184, $FF2184);
+	part_type_alpha3(part_charged, 1, 0.522, 0);
+	part_type_blend(part_charged, true);
+	part_type_life(part_charged, 30, 40);
+	part_emit_charged = part_emitter_create(global.spell_ps);
+	part_emitter_stream(global.spell_ps, part_emit_charged, part_charged, -20);
+	part_emitter_enable(global.spell_ps, part_emit_charged, false);
+}
+
+function destroyDebuffEmitters() {
+	part_emitter_destroy(global.spell_ps, part_emit_snow);
+	part_emitter_destroy(global.spell_ps, part_emit_burning);
+	part_emitter_destroy(global.spell_ps, part_emit_charged);
 }

@@ -7,7 +7,7 @@ else if(frozen) {
 	shader_set(shadEnemyFrozen);
 }
 
-if(!frozen && !IsObjectPaused()) {
+if(!frozen && !IsObjectPaused() && !stunned) {
 	if(direction > 90 && direction < 270) {
 	image_xscale = -1;
 	}

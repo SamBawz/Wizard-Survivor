@@ -11,6 +11,8 @@ else if(keyboard_check_pressed(ord("R"))) {
 	if(global.paused) {UnpauseGame();}
 	//else {PauseGame(); UnpauseGame();}
 	part_emitter_destroy_all(global.spell_ps);
+	part_emitter_destroy_all(global.tornado_ps);
+	part_emitter_destroy_all(global.lightning_ps);
 	game_restart();
 }
 
@@ -41,7 +43,14 @@ with(all) {
 	}
 }
 
+//Debug level button
+if (keyboard_check_pressed(ord("L"))) {
+	global.current_xp = 100;
+}
+
 if(global.current_xp >= 100) {
+	//heal
+	global.player_health = min(100, global.player_health+20);
 	global.current_xp = 0;
 	global.level++;
 	global.xp_modifier = 0.3 / global.level;

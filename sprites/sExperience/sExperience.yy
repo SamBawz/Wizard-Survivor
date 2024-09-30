@@ -24,7 +24,8 @@
   "height":16,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"623141dd-efb8-4beb-a680-a2083dddc3f7","blendMode":0,"displayName":"default","isLocked":false,"name":"623141dd-efb8-4beb-a680-a2083dddc3f7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"ab88c6dd-0d64-4440-b71d-9f19318ff623","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"ab88c6dd-0d64-4440-b71d-9f19318ff623","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"623141dd-efb8-4beb-a680-a2083dddc3f7","blendMode":0,"displayName":"default","isLocked":false,"name":"623141dd-efb8-4beb-a680-a2083dddc3f7","opacity":80.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"sExperience",
   "nineSlice":null,

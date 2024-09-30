@@ -39,6 +39,7 @@ global.elements = [
 	//{id: 14, name: "Pressure", description: "Heat+Air", obtainable: false},
 	{id: 15, name: "Magma", description: "Heat+Earth", icon:"sMagmaIcon", button: "sMagmaButton", obtainable: true},
 	{id: 23, name: "Ice", description: "Cold+Water", icon:"sIceIcon", button: "sIceButton", obtainable: true},
+	{id: 24, name: "Lightning", description: "Cold+Air", icon:"sIceIcon", button: "sIceButton", obtainable: true},
 	//{id: 24, name: "Vacuum", description: "Cold+Air", obtainable: false},
 ]
 

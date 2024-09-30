@@ -17,5 +17,5 @@ part_type_alpha3(_part_type_tornado, 1, 1, 1);
 part_type_blend(_part_type_tornado, false);
 part_type_life(_part_type_tornado, 40, 40);
 
-part_emit_tornado = part_emitter_create(global.moving_spell_ps);
-part_emitter_stream(global.moving_spell_ps, part_emit_tornado, _part_type_tornado, 1);
+part_emit_tornado = part_emitter_create(global.tornado_ps);
+part_emitter_stream(global.tornado_ps, part_emit_tornado, _part_type_tornado, 1);

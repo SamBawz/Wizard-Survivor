@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+if(IsObjectPaused()) {exit;}
 
 if(ds_list_find_index(invincibility_list, other) = -1) {
 	ds_list_add(invincibility_list, other);

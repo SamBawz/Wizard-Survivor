@@ -15,12 +15,19 @@ if(keyboard_check_pressed(ord("3"))) {
 }
 
 if(mouse_check_button_pressed(mb_left) && casting_animation = false && array_length(queued_elements) > 0) {
-	part_emitter_region(global.spell_ps, part_emit_failed, x, x, y-5, y-5, ps_shape_rectangle, ps_distr_linear);
-	casting_animation = true;
-	alarm[0] = 50;
-	PlayerCast();
+	prepareCast();
 }
 
-if(mouse_check_button(mb_right)) {
+if(mouse_check_button_pressed(mb_right) && casting_animation = false && array_length(queued_elements) > 0) {
+	saved_queued_elements = [];
+	array_copy(saved_queued_elements, 0, queued_elements, 0, array_length(queued_elements));
 	queued_elements = [];
+	//saved_queued_elements = queued_elements;
+	//prepareCast();
+}
+else if(mouse_check_button_pressed(mb_right) && casting_animation = false && array_length(saved_queued_elements) > 0) {
+	queued_elements = [];
+	array_copy(queued_elements, 0, saved_queued_elements, 0, array_length(saved_queued_elements));
+	//queued_elements = saved_queued_elements;
+	prepareCast();
 }

@@ -26,7 +26,8 @@ function PauseGame() {
 	}
 	//Pause relevant ps systems
 	part_system_automatic_update(global.spell_ps, false);
-	part_system_automatic_update(global.moving_spell_ps, false);
+	part_system_automatic_update(global.tornado_ps, false);
+	part_system_automatic_update(global.lightning_ps, false);
 }
 
 function UnpauseGame() {
@@ -50,7 +51,7 @@ function UnpauseGame() {
 		}
 	}
 	part_system_automatic_update(global.spell_ps, true);
-	part_system_automatic_update(global.moving_spell_ps, true);
+	part_system_automatic_update(global.tornado_ps, true);
 }
 
 //This function is ran by multiple objects to see if the game is paused or a menu screen is present
